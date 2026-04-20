@@ -144,7 +144,7 @@ module.exports = function(app) {
     let value = dict.value;
     let ts = Date.now();
     let position = getKeyValue('navigation.position', 60);
-    updateDatabase(ts, position.latitude, position.longitude, path, value.state, value.message);
+    updateDatabase(ts, position?.latitude, position?.longitude, path, value.state, value.message);
   }
 
   function getKeyValue(key, maxAge) {
